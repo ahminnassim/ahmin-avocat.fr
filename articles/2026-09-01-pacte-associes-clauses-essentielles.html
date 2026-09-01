@@ -1,4 +1,4 @@
-<title>Articles | Nassim Ahmin</title>
+<title>Pacte d'associ&eacute;s : les cinq clauses essentielles | Nassim Ahmin</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -10,7 +10,6 @@
   --grey:#6B7280;
   --border:rgba(0,0,0,.08);
   --surface:#F0EFEB;
-  --light:rgba(0,0,0,.02);
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Outfit','Segoe UI',sans-serif;
 }
@@ -56,49 +55,47 @@ a{text-decoration:none;color:inherit}
 }
 .nv-mobile a:hover{color:var(--accent)}
 
-.page-content{
-  max-width:1100px;margin:0 auto;padding:8rem 4rem 4rem;
+.article{
+  max-width:750px;margin:0 auto;padding:8rem 2rem 4rem;
 }
-.eyebrow{
-  display:block;font-family:var(--sans);font-size:.65rem;font-weight:600;
-  letter-spacing:.3em;text-transform:uppercase;color:var(--accent);
-  margin-bottom:.8rem;
+.article-back{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--sans);font-size:.7rem;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--grey);
+  margin-bottom:2.5rem;transition:color .3s;
 }
-.page-title{
-  font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);
-  font-weight:400;line-height:1.25;color:var(--black);margin-bottom:3rem;
-}
-.ac-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
-  border-top:1px solid var(--border);
-}
-.ac-card{
-  padding:2.5rem 2rem;
-  border-right:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  transition:background .3s;
-  display:flex;flex-direction:column;
-  text-decoration:none;color:inherit;
-}
-.ac-card:nth-child(3n){border-right:none}
-.ac-card:hover{background:var(--light)}
-.ac-date{
+.article-back:hover{color:var(--accent)}
+.article-meta{
   font-family:var(--sans);font-size:.68rem;font-weight:500;
   letter-spacing:.15em;text-transform:uppercase;color:var(--accent);
-  margin-bottom:1rem;
+  margin-bottom:1.2rem;
 }
-.ac-card h3{
-  font-family:var(--serif);font-size:1.15rem;font-weight:500;
-  color:var(--black);margin-bottom:.6rem;line-height:1.35;
+.article-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);
+  font-weight:400;line-height:1.2;color:var(--black);margin-bottom:1rem;
 }
-.ac-card p{font-size:.82rem;color:var(--grey);line-height:1.65;flex:1}
-.ac-tag{
-  display:inline-block;margin-top:1.2rem;
+.article-intro{
+  font-family:var(--sans);font-size:.95rem;color:var(--grey);
+  line-height:1.8;margin-bottom:2.5rem;text-align:justify;
+  border-left:3px solid var(--accent);padding-left:1.5rem;
+}
+.article-body h2{
+  font-family:var(--serif);font-size:1.3rem;font-weight:500;
+  color:var(--black);margin:2.2rem 0 .8rem;
+}
+.article-body p{
+  font-family:var(--sans);font-size:.9rem;color:var(--black);
+  line-height:1.8;margin-bottom:1.2rem;text-align:justify;
+}
+.article-bar{width:50px;height:2px;background:var(--accent);margin-bottom:2.5rem}
+.article-tag{
+  display:inline-block;margin-top:2rem;
   font-family:var(--sans);font-size:.6rem;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;
   color:var(--accent);border:1px solid var(--accent);
   padding:.3rem .7rem;
 }
+
 .ft{
   padding:3rem 4rem;
   border-top:1px solid rgba(0,0,0,.06);
@@ -112,24 +109,13 @@ a{text-decoration:none;color:inherit}
   transition:color .3s;
 }
 .ft-links a:hover{color:var(--accent)}
-.empty-msg{
-  text-align:center;padding:3rem 2rem;
-  font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.4rem);
-  color:var(--grey);letter-spacing:.04em;font-weight:300;font-style:italic;
-}
+
 @media(max-width:1024px){
   .nv{padding:1rem 2rem}
   .nv-links{display:none}
   .nv-burger{display:flex}
-  .page-content{padding:6rem 2rem 3rem}
-  .ac-grid{grid-template-columns:repeat(2,1fr)}
-  .ac-card:nth-child(3n){border-right:1px solid var(--border)}
-  .ac-card:nth-child(2n){border-right:none}
+  .article{padding:6rem 1.5rem 3rem}
   .ft{padding:2rem;flex-direction:column;gap:1rem;text-align:center}
-}
-@media(max-width:640px){
-  .ac-grid{grid-template-columns:1fr}
-  .ac-card{border-right:none!important}
 }
 </style>
 
@@ -147,8 +133,8 @@ a{text-decoration:none;color:inherit}
     <li><a href="../index.html#presentation">Pr&eacute;sentation</a></li>
     <li><a href="../index.html#accompagnement">Accompagnement</a></li>
     <li><a href="../index.html#savoir-faire">Savoir-faire</a></li>
-    <li><a href="../index.html#actualites">Actualit&eacute;s</a></li>
-    <li><a href="#" onclick="window.location.href='../index.html';return false">Contact</a></li>
+    <li><a href="index.html" class="active">Actualit&eacute;s</a></li>
+    <li><a href="../index.html" onclick="return false">Contact</a></li>
   </ul>
   <button class="nv-burger" aria-label="Menu" onclick="document.getElementById('nv-mobile').classList.toggle('open')">
     <span></span><span></span><span></span>
@@ -157,23 +143,40 @@ a{text-decoration:none;color:inherit}
     <a href="../index.html#presentation" onclick="document.getElementById('nv-mobile').classList.remove('open')">Pr&eacute;sentation</a>
     <a href="../index.html#accompagnement" onclick="document.getElementById('nv-mobile').classList.remove('open')">Accompagnement</a>
     <a href="../index.html#savoir-faire" onclick="document.getElementById('nv-mobile').classList.remove('open')">Savoir-faire</a>
-    <a href="../index.html#actualites" onclick="document.getElementById('nv-mobile').classList.remove('open')">Actualit&eacute;s</a>
+    <a href="index.html" onclick="document.getElementById('nv-mobile').classList.remove('open')">Actualit&eacute;s</a>
     <a href="../index.html" onclick="document.getElementById('nv-mobile').classList.remove('open')">Contact</a>
   </div>
 </nav>
 
-<div class="page-content">
-  <span class="eyebrow">Actualit&eacute;s</span>
-  <h1 class="page-title">Tous les articles</h1>
-  <div class="ac-grid" id="articles-grid">
-    <a href="2026-09-01-pacte-associes-clauses-essentielles.html" class="ac-card">
-      <span class="ac-date">1 septembre 2026</span>
-      <h3>Pacte d&rsquo;associ&eacute;s : les cinq clauses que tout dirigeant doit ma&icirc;triser</h3>
-      <p>Le pacte d&rsquo;associ&eacute;s anticipe les situations de blocage et organise la vie de chaque associ&eacute;. Tour d&rsquo;horizon des clauses essentielles.</p>
-      <span class="ac-tag">Droit des soci&eacute;t&eacute;s</span>
-    </a>
+<article class="article">
+  <a href="index.html" class="article-back">&larr; Tous les articles</a>
+  <div class="article-meta">1 septembre 2026 &mdash; 3 min de lecture</div>
+  <h1 class="article-title">Pacte d&rsquo;associ&eacute;s : les cinq clauses que tout dirigeant doit ma&icirc;triser</h1>
+  <div class="article-bar"></div>
+  <p class="article-intro">Instrument juridique souvent n&eacute;glig&eacute; lors de la cr&eacute;ation d&rsquo;une soci&eacute;t&eacute; ou de l&rsquo;entr&eacute;e d&rsquo;un nouvel associ&eacute;, le pacte d&rsquo;associ&eacute;s constitue pourtant le socle de la relation entre partenaires. Il anticipe les situations de blocage et organise la vie &mdash; et la sortie &mdash; de chacun. Tour d&rsquo;horizon des clauses essentielles.</p>
+  <div class="article-body">
+    <h2>1. La clause de pr&eacute;emption</h2>
+    <p>Elle accorde aux associ&eacute;s en place un droit de priorit&eacute; en cas de cession de parts par l&rsquo;un d&rsquo;entre eux. Concr&egrave;tement, avant de vendre &agrave; un tiers, l&rsquo;associ&eacute; sortant doit proposer ses titres aux autres, aux m&ecirc;mes conditions. Cette clause prot&egrave;ge contre l&rsquo;entr&eacute;e d&rsquo;un acteur ind&eacute;sirable au capital et permet de conserver la ma&icirc;trise de la gouvernance.</p>
+    <p>Lorsque les statuts pr&eacute;voient d&eacute;j&agrave; une clause d&rsquo;agr&eacute;ment &mdash; soumettant toute cession &agrave; l&rsquo;approbation des associ&eacute;s ou d&rsquo;un organe de direction &mdash;, il est essentiel d&rsquo;articuler les deux m&eacute;canismes pour &eacute;viter les contradictions. En pratique, le pacte peut pr&eacute;voir que la pr&eacute;emption s&rsquo;exerce en amont de la proc&eacute;dure d&rsquo;agr&eacute;ment&nbsp;: l&rsquo;associ&eacute; c&eacute;dant notifie d&rsquo;abord son projet aux b&eacute;n&eacute;ficiaires du droit de pr&eacute;emption, et ce n&rsquo;est qu&rsquo;en cas de non-exercice de ce droit que la proc&eacute;dure d&rsquo;agr&eacute;ment statutaire est d&eacute;clench&eacute;e. Cette articulation s&eacute;quentielle garantit la coh&eacute;rence entre les deux dispositifs et s&eacute;curise le parcours de cession.</p>
+
+    <h2>2. La clause de sortie conjointe (tag along)</h2>
+    <p>Elle prot&egrave;ge les associ&eacute;s minoritaires. Lorsqu&rsquo;un majoritaire n&eacute;gocie la cession de sa participation, les minoritaires peuvent exiger de c&eacute;der leurs titres aux m&ecirc;mes conditions de prix et de garantie. Sans cette clause, un minoritaire peut se retrouver enferm&eacute; dans une soci&eacute;t&eacute; dont le contr&ocirc;le a chang&eacute; de mains, sans possibilit&eacute; de sortie &agrave; des conditions &eacute;quivalentes.</p>
+
+    <h2>3. La clause d&rsquo;entra&icirc;nement (drag along)</h2>
+    <p>Sym&eacute;trique de la pr&eacute;c&eacute;dente, elle sert cette fois l&rsquo;int&eacute;r&ecirc;t du majoritaire. Elle lui permet d&rsquo;obliger les minoritaires &agrave; c&eacute;der leurs parts en m&ecirc;me temps que lui, lorsqu&rsquo;un acqu&eacute;reur souhaite racheter 100&nbsp;% du capital. Cette clause est particuli&egrave;rement recherch&eacute;e par les investisseurs en private equity, qui ont besoin de garantir une sortie totale &agrave; l&rsquo;horizon pr&eacute;vu.</p>
+
+    <h2>4. La clause de non-concurrence</h2>
+    <p>Elle interdit &agrave; un associ&eacute;, pendant la dur&eacute;e de sa pr&eacute;sence au capital et parfois au-del&agrave;, d&rsquo;exercer une activit&eacute; concurrente ou de prendre des participations dans une soci&eacute;t&eacute; concurrente. Pour &ecirc;tre valable, elle doit &ecirc;tre limit&eacute;e dans le temps, dans l&rsquo;espace et proportionn&eacute;e &agrave; l&rsquo;objet social de la soci&eacute;t&eacute;. Une r&eacute;daction impr&eacute;cise expose au risque de nullit&eacute;.</p>
+
+    <h2>5. La clause de gouvernance</h2>
+    <p>Elle organise le fonctionnement des organes de d&eacute;cision au-del&agrave; de ce que pr&eacute;voient les statuts&nbsp;: droit de veto sur certaines d&eacute;cisions strat&eacute;giques, composition du comit&eacute; de direction, r&egrave;gles de majorit&eacute; renforc&eacute;e, obligation d&rsquo;information p&eacute;riodique. Ces stipulations sont essentielles lorsque des investisseurs financiers cohabitent avec des dirigeants op&eacute;rationnels.</p>
+
+    <h2>L&rsquo;importance du sur-mesure</h2>
+    <p>Chaque pacte d&rsquo;associ&eacute;s doit &ecirc;tre r&eacute;dig&eacute; en fonction du projet, de la taille de l&rsquo;entreprise, du nombre d&rsquo;associ&eacute;s et de la pr&eacute;sence &eacute;ventuelle d&rsquo;investisseurs. Un pacte standardis&eacute; ou calqu&eacute; sur un mod&egrave;le en ligne expose les parties &agrave; des lacunes qui se r&eacute;v&egrave;lent au pire moment&nbsp;: lors d&rsquo;un conflit entre associ&eacute;s, d&rsquo;une lev&eacute;e de fonds ou d&rsquo;un projet de cession.</p>
+    <p>L&rsquo;accompagnement par un avocat sp&eacute;cialis&eacute; en droit des affaires permet d&rsquo;adapter chaque clause &agrave; la r&eacute;alit&eacute; de l&rsquo;entreprise et d&rsquo;anticiper les sc&eacute;narios que les associ&eacute;s n&rsquo;envisagent pas au moment de leur alliance.</p>
   </div>
-</div>
+  <span class="article-tag">Droit des soci&eacute;t&eacute;s</span>
+</article>
 
 <footer class="ft">
   <div>
