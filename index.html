@@ -1189,8 +1189,9 @@ document.querySelectorAll('[data-cc-animate]').forEach(function(h3){
 (function(){
   var loading=document.getElementById('loading');
   var main=document.getElementById('main');
-  var isInternal=document.referrer&&document.referrer.indexOf(location.hostname)!==-1;
-  if(isInternal){
+  var hasVisited=false;
+  try{hasVisited=sessionStorage.getItem('na_visited')}catch(e){}
+  if(hasVisited){
     loading.classList.add('done');
     main.style.opacity='1';
     document.querySelectorAll('.rv').forEach(function(el){el.classList.add('show')});
@@ -1198,6 +1199,7 @@ document.querySelectorAll('[data-cc-animate]').forEach(function(h3){
     var heroImg=document.getElementById('hero-img');
     if(heroImg)heroImg.classList.add('reveal');
   }else{
+    try{sessionStorage.setItem('na_visited','1')}catch(e){}
     setTimeout(function(){
       try{
         loading.classList.add('done');
