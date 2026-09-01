@@ -1,4 +1,4 @@
-<title>Articles | Nassim Ahmin</title>
+<title>C&eacute;der son entreprise : les &eacute;tapes cl&eacute;s | Nassim Ahmin</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -10,7 +10,6 @@
   --grey:#6B7280;
   --border:rgba(0,0,0,.08);
   --surface:#F0EFEB;
-  --light:rgba(0,0,0,.02);
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Outfit','Segoe UI',sans-serif;
 }
@@ -56,49 +55,47 @@ a{text-decoration:none;color:inherit}
 }
 .nv-mobile a:hover{color:var(--accent)}
 
-.page-content{
-  max-width:1100px;margin:0 auto;padding:8rem 4rem 4rem;
+.article{
+  max-width:750px;margin:0 auto;padding:8rem 2rem 4rem;
 }
-.eyebrow{
-  display:block;font-family:var(--sans);font-size:.65rem;font-weight:600;
-  letter-spacing:.3em;text-transform:uppercase;color:var(--accent);
-  margin-bottom:.8rem;
+.article-back{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--sans);font-size:.7rem;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--grey);
+  margin-bottom:2.5rem;transition:color .3s;
 }
-.page-title{
-  font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);
-  font-weight:400;line-height:1.25;color:var(--black);margin-bottom:3rem;
-}
-.ac-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
-  border-top:1px solid var(--border);
-}
-.ac-card{
-  padding:2.5rem 2rem;
-  border-right:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  transition:background .3s;
-  display:flex;flex-direction:column;
-  text-decoration:none;color:inherit;
-}
-.ac-card:nth-child(3n){border-right:none}
-.ac-card:hover{background:var(--light)}
-.ac-date{
+.article-back:hover{color:var(--accent)}
+.article-meta{
   font-family:var(--sans);font-size:.68rem;font-weight:500;
   letter-spacing:.15em;text-transform:uppercase;color:var(--accent);
-  margin-bottom:1rem;
+  margin-bottom:1.2rem;
 }
-.ac-card h3{
-  font-family:var(--serif);font-size:1.15rem;font-weight:500;
-  color:var(--black);margin-bottom:.6rem;line-height:1.35;
+.article-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);
+  font-weight:400;line-height:1.2;color:var(--black);margin-bottom:1rem;
 }
-.ac-card p{font-size:.82rem;color:var(--grey);line-height:1.65;flex:1}
-.ac-tag{
-  display:inline-block;margin-top:1.2rem;
+.article-intro{
+  font-family:var(--sans);font-size:.95rem;color:var(--grey);
+  line-height:1.8;margin-bottom:2.5rem;text-align:justify;
+  border-left:3px solid var(--accent);padding-left:1.5rem;
+}
+.article-body h2{
+  font-family:var(--serif);font-size:1.3rem;font-weight:500;
+  color:var(--black);margin:2.2rem 0 .8rem;
+}
+.article-body p{
+  font-family:var(--sans);font-size:.9rem;color:var(--black);
+  line-height:1.8;margin-bottom:1.2rem;text-align:justify;
+}
+.article-bar{width:50px;height:2px;background:var(--accent);margin-bottom:2.5rem}
+.article-tag{
+  display:inline-block;margin-top:2rem;
   font-family:var(--sans);font-size:.6rem;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;
   color:var(--accent);border:1px solid var(--accent);
   padding:.3rem .7rem;
 }
+
 .ft{
   padding:3rem 4rem;
   border-top:1px solid rgba(0,0,0,.06);
@@ -112,24 +109,13 @@ a{text-decoration:none;color:inherit}
   transition:color .3s;
 }
 .ft-links a:hover{color:var(--accent)}
-.empty-msg{
-  text-align:center;padding:3rem 2rem;
-  font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.4rem);
-  color:var(--grey);letter-spacing:.04em;font-weight:300;font-style:italic;
-}
+
 @media(max-width:1024px){
   .nv{padding:1rem 2rem}
   .nv-links{display:none}
   .nv-burger{display:flex}
-  .page-content{padding:6rem 2rem 3rem}
-  .ac-grid{grid-template-columns:repeat(2,1fr)}
-  .ac-card:nth-child(3n){border-right:1px solid var(--border)}
-  .ac-card:nth-child(2n){border-right:none}
+  .article{padding:6rem 1.5rem 3rem}
   .ft{padding:2rem;flex-direction:column;gap:1rem;text-align:center}
-}
-@media(max-width:640px){
-  .ac-grid{grid-template-columns:1fr}
-  .ac-card{border-right:none!important}
 }
 </style>
 
@@ -147,8 +133,8 @@ a{text-decoration:none;color:inherit}
     <li><a href="../index.html#presentation">Pr&eacute;sentation</a></li>
     <li><a href="../index.html#accompagnement">Accompagnement</a></li>
     <li><a href="../index.html#savoir-faire">Savoir-faire</a></li>
-    <li><a href="../index.html#actualites">Actualit&eacute;s</a></li>
-    <li><a href="#" onclick="window.location.href='../index.html';return false">Contact</a></li>
+    <li><a href="index.html" class="active">Actualit&eacute;s</a></li>
+    <li><a href="../index.html" onclick="return false">Contact</a></li>
   </ul>
   <button class="nv-burger" aria-label="Menu" onclick="document.getElementById('nv-mobile').classList.toggle('open')">
     <span></span><span></span><span></span>
@@ -157,29 +143,38 @@ a{text-decoration:none;color:inherit}
     <a href="../index.html#presentation" onclick="document.getElementById('nv-mobile').classList.remove('open')">Pr&eacute;sentation</a>
     <a href="../index.html#accompagnement" onclick="document.getElementById('nv-mobile').classList.remove('open')">Accompagnement</a>
     <a href="../index.html#savoir-faire" onclick="document.getElementById('nv-mobile').classList.remove('open')">Savoir-faire</a>
-    <a href="../index.html#actualites" onclick="document.getElementById('nv-mobile').classList.remove('open')">Actualit&eacute;s</a>
+    <a href="index.html" onclick="document.getElementById('nv-mobile').classList.remove('open')">Actualit&eacute;s</a>
     <a href="../index.html" onclick="document.getElementById('nv-mobile').classList.remove('open')">Contact</a>
   </div>
 </nav>
 
-<div class="page-content">
-  <span class="eyebrow">Actualit&eacute;s</span>
-  <h1 class="page-title">Tous les articles</h1>
-  <div class="ac-grid" id="articles-grid">
-    <a href="2026-09-01-ceder-entreprise-etapes-cles.html" class="ac-card">
-      <span class="ac-date">1 septembre 2026</span>
-      <h3>C&eacute;der son entreprise&nbsp;: les &eacute;tapes cl&eacute;s d&rsquo;une transmission r&eacute;ussie</h3>
-      <p>La cession d&rsquo;une PME ou ETI familiale engage patrimoine, salari&eacute;s et h&eacute;ritage entrepreneurial. Les &eacute;tapes pour la r&eacute;ussir.</p>
-      <span class="ac-tag">Cessions &amp; Transmissions</span>
-    </a>
-    <a href="2026-09-01-pacte-associes-clauses-essentielles.html" class="ac-card">
-      <span class="ac-date">1 septembre 2026</span>
-      <h3>Pacte d&rsquo;associ&eacute;s : les cinq clauses que tout dirigeant doit ma&icirc;triser</h3>
-      <p>Le pacte d&rsquo;associ&eacute;s anticipe les situations de blocage et organise la vie de chaque associ&eacute;. Tour d&rsquo;horizon des clauses essentielles.</p>
-      <span class="ac-tag">Droit des soci&eacute;t&eacute;s</span>
-    </a>
+<article class="article">
+  <a href="index.html" class="article-back">&larr; Tous les articles</a>
+  <div class="article-meta">1 septembre 2026 &mdash; 3 min de lecture</div>
+  <h1 class="article-title">C&eacute;der son entreprise&nbsp;: les &eacute;tapes cl&eacute;s d&rsquo;une transmission r&eacute;ussie</h1>
+  <div class="article-bar"></div>
+  <p class="article-intro">Pour le dirigeant d&rsquo;une PME ou d&rsquo;une ETI familiale, la cession de son entreprise est souvent l&rsquo;op&eacute;ration la plus importante de sa vie professionnelle. Elle engage son patrimoine, ses salari&eacute;s et son h&eacute;ritage entrepreneurial. Une transmission r&eacute;ussie ne s&rsquo;improvise pas&nbsp;: elle se pr&eacute;pare, se structure et se s&eacute;curise &agrave; chaque &eacute;tape.</p>
+  <div class="article-body">
+    <h2>1. Anticiper et pr&eacute;parer l&rsquo;entreprise</h2>
+    <p>La pr&eacute;paration commence bien avant la mise en vente. Il s&rsquo;agit de rendre l&rsquo;entreprise attractive pour un repreneur&nbsp;: clarifier la gouvernance, r&eacute;gulariser les situations juridiques en suspens, fiabiliser les comptes et r&eacute;duire la d&eacute;pendance &agrave; la personne du dirigeant. Une entreprise dont le fonctionnement repose sur un homme seul inqui&egrave;te les acqu&eacute;reurs. Structurer l&rsquo;&eacute;quipe de direction et formaliser les processus internes sont des leviers de valorisation souvent sous-estim&eacute;s.</p>
+
+    <h2>2. &Eacute;valuer et valoriser</h2>
+    <p>La fixation du prix est un exercice d&eacute;licat qui combine m&eacute;thodes financi&egrave;res &mdash; multiples de r&eacute;sultat, actualisation des flux de tr&eacute;sorerie &mdash; et r&eacute;alit&eacute; du march&eacute;. Le dirigeant doit distinguer la valeur de son entreprise, fond&eacute;e sur des crit&egrave;res objectifs, du prix de cession, qui r&eacute;sulte d&rsquo;une n&eacute;gociation. Un &eacute;cart trop important entre les attentes du c&eacute;dant et la perception de l&rsquo;acqu&eacute;reur peut bloquer l&rsquo;op&eacute;ration d&egrave;s ses premi&egrave;res &eacute;tapes.</p>
+
+    <h2>3. Identifier le bon repreneur</h2>
+    <p>Repreneur individuel, concurrent, fonds d&rsquo;investissement, cadre de l&rsquo;entreprise via un MBO&nbsp;: chaque profil d&rsquo;acqu&eacute;reur pr&eacute;sente des avantages et des contraintes sp&eacute;cifiques. Le choix ne se r&eacute;duit pas au prix propos&eacute;. La capacit&eacute; du repreneur &agrave; financer l&rsquo;op&eacute;ration, son projet pour l&rsquo;entreprise et sa compatibilit&eacute; avec la culture de la soci&eacute;t&eacute; sont des crit&egrave;res d&eacute;terminants pour la p&eacute;rennit&eacute; de l&rsquo;activit&eacute; apr&egrave;s la cession.</p>
+
+    <h2>4. Structurer la n&eacute;gociation et les actes</h2>
+    <p>Une fois le repreneur identifi&eacute;, la n&eacute;gociation se formalise par &eacute;tapes&nbsp;: lettre d&rsquo;intention, audit d&rsquo;acquisition (due diligence), protocole de cession puis acte d&eacute;finitif. Chaque document engage les parties et doit &ecirc;tre r&eacute;dig&eacute; avec pr&eacute;cision. La lettre d&rsquo;intention, souvent per&ccedil;ue comme une simple formalit&eacute;, fixe pourtant le cadre de la n&eacute;gociation &mdash; prix, calendrier, conditions suspensives, exclusivit&eacute; &mdash; et peut s&rsquo;av&eacute;rer contraignante si elle est mal formul&eacute;e.</p>
+
+    <h2>5. S&eacute;curiser l&rsquo;apr&egrave;s-cession</h2>
+    <p>La garantie d&rsquo;actif et de passif est le dispositif central de protection de l&rsquo;acqu&eacute;reur. Elle engage le c&eacute;dant &agrave; indemniser le repreneur si des passifs ant&eacute;rieurs &agrave; la cession se r&eacute;v&egrave;lent apr&egrave;s le transfert. Sa r&eacute;daction &mdash; plafond, dur&eacute;e, franchise, modalit&eacute;s de mise en &oelig;uvre &mdash; fait l&rsquo;objet de n&eacute;gociations serr&eacute;es. Le c&eacute;dant doit &eacute;galement anticiper les cons&eacute;quences fiscales de la cession et, le cas &eacute;ch&eacute;ant, organiser une p&eacute;riode d&rsquo;accompagnement pour assurer la transition avec le repreneur.</p>
+
+    <h2>Un accompagnement sur mesure</h2>
+    <p>La transmission d&rsquo;une entreprise mobilise des comp&eacute;tences juridiques, fiscales et financi&egrave;res qui doivent &ecirc;tre coordonn&eacute;es d&egrave;s le d&eacute;but du processus. L&rsquo;intervention d&rsquo;un avocat sp&eacute;cialis&eacute; permet de structurer l&rsquo;op&eacute;ration, de s&eacute;curiser chaque &eacute;tape et de d&eacute;fendre les int&eacute;r&ecirc;ts du c&eacute;dant dans un cadre ma&icirc;tris&eacute;.</p>
   </div>
-</div>
+  <span class="article-tag">Cessions &amp; Transmissions</span>
+</article>
 
 <footer class="ft">
   <div>
