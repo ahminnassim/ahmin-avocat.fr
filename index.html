@@ -1197,16 +1197,16 @@ document.querySelectorAll('[data-cc-animate]').forEach(function(h3){
     document.querySelectorAll('.hs-item').forEach(function(el){el.classList.add('show')});
     var heroImg=document.getElementById('hero-img');
     if(heroImg)heroImg.classList.add('reveal');
-    return;
+  }else{
+    setTimeout(function(){
+      try{
+        loading.classList.add('done');
+        main.style.transition='opacity .6s ease';
+        main.style.opacity='1';
+        setTimeout(startHero,300);
+      }catch(e){}
+    },2800);
   }
-  setTimeout(function(){
-    try{
-      loading.classList.add('done');
-      main.style.transition='opacity .6s ease';
-      main.style.opacity='1';
-      setTimeout(startHero,300);
-    }catch(e){}
-  },2800);
 
   // Hero section animations
   function startHero(){
