@@ -1,4 +1,4 @@
-<title>Articles | Nassim Ahmin</title>
+<title>Cession de PME&nbsp;: information des salari&eacute;s | Nassim Ahmin</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -10,7 +10,6 @@
   --grey:#6B7280;
   --border:rgba(0,0,0,.08);
   --surface:#F0EFEB;
-  --light:rgba(0,0,0,.02);
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Outfit','Segoe UI',sans-serif;
 }
@@ -56,49 +55,50 @@ a{text-decoration:none;color:inherit}
 }
 .nv-mobile a:hover{color:var(--accent)}
 
-.page-content{
-  max-width:1100px;margin:0 auto;padding:8rem 4rem 4rem;
+.article{
+  max-width:750px;margin:0 auto;padding:8rem 2rem 4rem;
 }
-.eyebrow{
-  display:block;font-family:var(--sans);font-size:.65rem;font-weight:600;
-  letter-spacing:.3em;text-transform:uppercase;color:var(--accent);
-  margin-bottom:.8rem;
+.article-back{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--sans);font-size:.7rem;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--grey);
+  margin-bottom:2.5rem;transition:color .3s;
 }
-.page-title{
-  font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);
-  font-weight:400;line-height:1.25;color:var(--black);margin-bottom:3rem;
-}
-.ac-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
-  border-top:1px solid var(--border);
-}
-.ac-card{
-  padding:2.5rem 2rem;
-  border-right:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  transition:background .3s;
-  display:flex;flex-direction:column;
-  text-decoration:none;color:inherit;
-}
-.ac-card:nth-child(3n){border-right:none}
-.ac-card:hover{background:var(--light)}
-.ac-date{
+.article-back:hover{color:var(--accent)}
+.article-meta{
   font-family:var(--sans);font-size:.68rem;font-weight:500;
   letter-spacing:.15em;text-transform:uppercase;color:var(--accent);
-  margin-bottom:1rem;
+  margin-bottom:1.2rem;
 }
-.ac-card h3{
-  font-family:var(--serif);font-size:1.15rem;font-weight:500;
-  color:var(--black);margin-bottom:.6rem;line-height:1.35;
+.article-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);
+  font-weight:400;line-height:1.2;color:var(--black);margin-bottom:1rem;
 }
-.ac-card p{font-size:.82rem;color:var(--grey);line-height:1.65;flex:1}
-.ac-tag{
-  display:inline-block;margin-top:1.2rem;
+.article-intro{
+  font-family:var(--sans);font-size:.95rem;color:var(--grey);
+  line-height:1.8;margin-bottom:2.5rem;text-align:justify;
+  border-left:3px solid var(--accent);padding-left:1.5rem;
+}
+.article-body h2{
+  font-family:var(--serif);font-size:1.3rem;font-weight:500;
+  color:var(--black);margin:2.2rem 0 .8rem;
+}
+.article-body p{
+  font-family:var(--sans);font-size:.9rem;color:var(--black);
+  line-height:1.8;margin-bottom:1.2rem;text-align:justify;
+}
+.article-bar{width:50px;height:2px;background:var(--accent);margin-bottom:2.5rem}
+.article-tag{
+  display:inline-block;margin-top:2rem;
   font-family:var(--sans);font-size:.6rem;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;
   color:var(--accent);border:1px solid var(--accent);
   padding:.3rem .7rem;
 }
+.article-body table{width:100%;border-collapse:collapse;margin:0 0 2rem}
+.article-body th{background:var(--surface);color:var(--accent);text-align:left;font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.03em;padding:.6rem .8rem;border:1px solid var(--border)}
+.article-body td{font-family:var(--sans);font-size:.82rem;color:var(--black);line-height:1.5;padding:.6rem .8rem;border:1px solid var(--border)}
+
 .ft{
   padding:3rem 4rem;
   border-top:1px solid rgba(0,0,0,.06);
@@ -112,24 +112,13 @@ a{text-decoration:none;color:inherit}
   transition:color .3s;
 }
 .ft-links a:hover{color:var(--accent)}
-.empty-msg{
-  text-align:center;padding:3rem 2rem;
-  font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.4rem);
-  color:var(--grey);letter-spacing:.04em;font-weight:300;font-style:italic;
-}
+
 @media(max-width:1024px){
   .nv{padding:1rem 2rem}
   .nv-links{display:none}
   .nv-burger{display:flex}
-  .page-content{padding:6rem 2rem 3rem}
-  .ac-grid{grid-template-columns:repeat(2,1fr)}
-  .ac-card:nth-child(3n){border-right:1px solid var(--border)}
-  .ac-card:nth-child(2n){border-right:none}
+  .article{padding:6rem 1.5rem 3rem}
   .ft{padding:2rem;flex-direction:column;gap:1rem;text-align:center}
-}
-@media(max-width:640px){
-  .ac-grid{grid-template-columns:1fr}
-  .ac-card{border-right:none!important}
 }
 </style>
 
@@ -147,8 +136,8 @@ a{text-decoration:none;color:inherit}
     <li><a href="../index.html#presentation">Pr&eacute;sentation</a></li>
     <li><a href="../index.html#accompagnement">Accompagnement</a></li>
     <li><a href="../index.html#savoir-faire">Savoir-faire</a></li>
-    <li><a href="../index.html#actualites">Actualit&eacute;s</a></li>
-    <li><a href="#" onclick="window.location.href='../index.html';return false">Contact</a></li>
+    <li><a href="index.html" class="active">Actualit&eacute;s</a></li>
+    <li><a href="../index.html" onclick="return false">Contact</a></li>
   </ul>
   <button class="nv-burger" aria-label="Menu" onclick="document.getElementById('nv-mobile').classList.toggle('open')">
     <span></span><span></span><span></span>
@@ -157,41 +146,47 @@ a{text-decoration:none;color:inherit}
     <a href="../index.html#presentation" onclick="document.getElementById('nv-mobile').classList.remove('open')">Pr&eacute;sentation</a>
     <a href="../index.html#accompagnement" onclick="document.getElementById('nv-mobile').classList.remove('open')">Accompagnement</a>
     <a href="../index.html#savoir-faire" onclick="document.getElementById('nv-mobile').classList.remove('open')">Savoir-faire</a>
-    <a href="../index.html#actualites" onclick="document.getElementById('nv-mobile').classList.remove('open')">Actualit&eacute;s</a>
+    <a href="index.html" onclick="document.getElementById('nv-mobile').classList.remove('open')">Actualit&eacute;s</a>
     <a href="../index.html" onclick="document.getElementById('nv-mobile').classList.remove('open')">Contact</a>
   </div>
 </nav>
 
-<div class="page-content">
-  <span class="eyebrow">Actualit&eacute;s</span>
-  <h1 class="page-title">Tous les articles</h1>
-  <div class="ac-grid" id="articles-grid">
-    <a href="2026-09-02-cession-pme-information-salaries.html" class="ac-card">
-      <span class="ac-date">2 septembre 2026</span>
-      <h3>Cession de PME&nbsp;: ce que change la loi du 26 mai 2026 sur l&rsquo;information des salari&eacute;s</h3>
-      <p>La loi du 26 mai 2026 r&eacute;duit le d&eacute;lai et la sanction attach&eacute;s &agrave; l&rsquo;information des salari&eacute;s en cas de cession, qu&rsquo;il s&rsquo;agisse du fonds de commerce ou des titres.</p>
-      <span class="ac-tag">Cessions &amp; Transmissions</span>
-    </a>
-    <a href="2026-09-01-lbo-levier-croissance-pme.html" class="ac-card">
-      <span class="ac-date">1 septembre 2026</span>
-      <h3>LBO&nbsp;: un levier de croissance accessible aux PME</h3>
-      <p>Le LBO est souvent per&ccedil;u comme un outil r&eacute;serv&eacute; aux grandes op&eacute;rations. Il constitue pourtant un levier adapt&eacute; aux PME et ETI.</p>
-      <span class="ac-tag">Private Equity &amp; LBO</span>
-    </a>
-    <a href="2026-09-01-ceder-entreprise-etapes-cles.html" class="ac-card">
-      <span class="ac-date">1 septembre 2026</span>
-      <h3>C&eacute;der son entreprise&nbsp;: les &eacute;tapes cl&eacute;s d&rsquo;une transmission r&eacute;ussie</h3>
-      <p>La cession d&rsquo;une PME ou ETI familiale engage patrimoine, salari&eacute;s et h&eacute;ritage entrepreneurial. Les &eacute;tapes pour la r&eacute;ussir.</p>
-      <span class="ac-tag">Cessions &amp; Transmissions</span>
-    </a>
-    <a href="2026-09-01-pacte-associes-clauses-essentielles.html" class="ac-card">
-      <span class="ac-date">1 septembre 2026</span>
-      <h3>Pacte d&rsquo;associ&eacute;s : les cinq clauses que tout dirigeant doit ma&icirc;triser</h3>
-      <p>Le pacte d&rsquo;associ&eacute;s anticipe les situations de blocage et organise la vie de chaque associ&eacute;. Tour d&rsquo;horizon des clauses essentielles.</p>
-      <span class="ac-tag">Droit des soci&eacute;t&eacute;s</span>
-    </a>
+<article class="article">
+  <a href="index.html" class="article-back">&larr; Tous les articles</a>
+  <div class="article-meta">2 septembre 2026 &mdash; 3 min de lecture</div>
+  <h1 class="article-title">Cession de PME&nbsp;: ce que change la loi du 26 mai 2026 sur l&rsquo;information des salari&eacute;s</h1>
+  <div class="article-bar"></div>
+  <p class="article-intro">Depuis la loi Hamon de 2014, c&eacute;der son entreprise imposait d&rsquo;informer pr&eacute;alablement les salari&eacute;s de leur droit de pr&eacute;senter une offre de rachat. Une obligation lourde, souvent mal comprise, et sanctionn&eacute;e s&eacute;v&egrave;rement. La loi de simplification de la vie &eacute;conomique du 26 mai 2026 vient rebattre les cartes.</p>
+  <div class="article-body">
+    <h2>Un champ d&rsquo;application resserr&eacute;</h2>
+    <p>La r&eacute;forme distingue d&eacute;sormais nettement deux r&eacute;gimes selon la taille de l&rsquo;entreprise. Pour les structures de moins de 50 salari&eacute;s, l&rsquo;obligation d&rsquo;information individuelle directe demeure, recentr&eacute;e sur son public naturel&nbsp;: les petites structures o&ugrave; un rachat par les salari&eacute;s est r&eacute;ellement envisageable. Pour les entreprises de 50 salari&eacute;s et plus dot&eacute;es d&rsquo;un CSE, cette information individuelle dispara&icirc;t au profit d&rsquo;une consultation collective de l&rsquo;instance repr&eacute;sentative, un formalisme plus adapt&eacute; &agrave; des organisations d&eacute;j&agrave; structur&eacute;es.</p>
+
+    <h2>Le cas de la cession du fonds de commerce</h2>
+    <p>L&rsquo;obligation d&rsquo;information ne concerne pas uniquement la cession des titres d&rsquo;une soci&eacute;t&eacute;&nbsp;: elle s&rsquo;applique de la m&ecirc;me fa&ccedil;on &agrave; la vente d&rsquo;un fonds de commerce, qu&rsquo;il s&rsquo;agisse d&rsquo;une entreprise individuelle ou d&rsquo;une soci&eacute;t&eacute; qui c&egrave;de son actif d&rsquo;exploitation plut&ocirc;t que ses titres. Ces deux hypoth&egrave;ses reposent sur des textes distincts &mdash; l&rsquo;article L.&nbsp;141-23 du Code de commerce pour le fonds de commerce, les articles L.&nbsp;23-10-1 et suivants pour la cession de titres &mdash; mais la loi du 26 mai 2026 les r&eacute;forme de fa&ccedil;on sym&eacute;trique&nbsp;: m&ecirc;me resserrement du public concern&eacute; selon l&rsquo;effectif, m&ecirc;me r&eacute;duction du d&eacute;lai, m&ecirc;me all&eacute;gement de la sanction. Un dirigeant qui h&eacute;site entre c&eacute;der son fonds ou c&eacute;der les titres de sa soci&eacute;t&eacute; doit donc int&eacute;grer cette contrainte dans les deux sc&eacute;narios, sans qu&rsquo;elle ne p&egrave;se davantage dans un sens que dans l&rsquo;autre.</p>
+
+    <h2>Un d&eacute;lai divis&eacute; par deux</h2>
+    <p>Le changement le plus sensible pour les c&eacute;dants concerne le calendrier&nbsp;: le d&eacute;lai minimal entre l&rsquo;information des salari&eacute;s et la signature de la cession &mdash; du fonds comme des titres &mdash; passe de deux mois &agrave; un mois. Pour un dirigeant qui a d&eacute;j&agrave; n&eacute;goci&eacute; pendant des mois avec un repreneur, cette r&eacute;duction de moiti&eacute; limite le risque de voir une op&eacute;ration capoter faute de d&eacute;lai, ou de devoir d&eacute;voiler l&rsquo;identit&eacute; de l&rsquo;acqu&eacute;reur trop t&ocirc;t dans le processus.</p>
+
+    <h2>Une sanction nettement all&eacute;g&eacute;e</h2>
+    <p>Le non-respect de l&rsquo;obligation d&rsquo;information restait jusqu&rsquo;ici sanctionn&eacute; par une amende civile pouvant atteindre 2&nbsp;% du prix de vente &mdash; un montant dissuasif qui p&eacute;sait lourdement sur la s&eacute;curit&eacute; juridique de l&rsquo;op&eacute;ration. Ce plafond est d&eacute;sormais ramen&eacute; &agrave; 0,5&nbsp;%. Le risque financier attach&eacute; &agrave; un oubli ou une erreur de proc&eacute;dure reste r&eacute;el, mais il n&rsquo;est plus disproportionn&eacute; au regard de la faute commise.</p>
+
+    <h2>Ce qu&rsquo;il faut retenir</h2>
+    <p>Pour un dirigeant de PME qui envisage une cession, trois r&eacute;flexes s&rsquo;imposent&nbsp;: v&eacute;rifier l&rsquo;effectif exact de l&rsquo;entreprise pour identifier le r&eacute;gime applicable (information directe ou consultation du CSE), int&eacute;grer le nouveau d&eacute;lai d&rsquo;un mois dans le r&eacute;troplanning de l&rsquo;op&eacute;ration &mdash; que la cession porte sur le fonds ou sur les titres &mdash;, et ne pas rel&acirc;cher la rigueur proc&eacute;durale malgr&eacute; la baisse du plafond de sanction. Un accompagnement juridique en amont permet de s&eacute;curiser ce calendrier resserr&eacute; sans exposer l&rsquo;op&eacute;ration &agrave; un risque &eacute;vitable.</p>
+
+    <h2>R&eacute;capitulatif</h2>
+    <table>
+    <tr><th></th><th>Avant le 27 juillet 2026</th><th>Depuis le 27 juillet 2026</th></tr>
+    <tr><td>Entreprises &lt; 50 salari&eacute;s</td><td>Information individuelle directe de chaque salari&eacute;</td><td>Information individuelle directe maintenue</td></tr>
+    <tr><td>Entreprises &ge; 50 salari&eacute;s (avec CSE)</td><td>Information individuelle directe de chaque salari&eacute;</td><td>Consultation collective du CSE, sans information individuelle</td></tr>
+    <tr><td>Op&eacute;rations concern&eacute;es</td><td>Vente de fonds de commerce ou cession de participations donnant acc&egrave;s &agrave; la majorit&eacute; du capital</td><td>Inchang&eacute; &mdash; les deux op&eacute;rations restent soumises &agrave; l&rsquo;obligation</td></tr>
+    <tr><td>D&eacute;lai minimal avant la cession</td><td>2 mois &agrave; compter de l&rsquo;information des salari&eacute;s</td><td>1 mois &agrave; compter de l&rsquo;information ou de la consultation du CSE</td></tr>
+    <tr><td>Plafond de l&rsquo;amende civile en cas de manquement</td><td>2&nbsp;% du prix de vente</td><td>0,5&nbsp;% du prix de vente</td></tr>
+    <tr><td>Fondement l&eacute;gal</td><td>Art. L.&nbsp;141-23 (fonds de commerce) et L.&nbsp;23-10-1 et s. (titres) du Code de commerce</td><td>M&ecirc;mes articles, modifi&eacute;s par la loi n&deg; 2026-403 du 26 mai 2026</td></tr>
+    <tr><td>Cessions concern&eacute;es par le nouveau r&eacute;gime</td><td>&mdash;</td><td>Cessions conclues &agrave; compter du 27 juillet 2026</td></tr>
+    </table>
   </div>
-</div>
+  <span class="article-tag">Cessions &amp; Transmissions</span>
+</article>
 
 <footer class="ft">
   <div>
