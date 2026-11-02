@@ -1,0 +1,202 @@
+<title>Rapport Gr&eacute;goire&nbsp;: le cr&eacute;dit-vendeur, vendre son entreprise sans encaisser tout le prix le jour de la cession | Nassim Ahmin</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#2C4A6E;
+  --accent-h:#3A5F8A;
+  --black:#1a1a1a;
+  --white:#FAFAF9;
+  --grey:#6B7280;
+  --border:rgba(0,0,0,.08);
+  --surface:#F0EFEB;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Outfit','Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;font-size:1rem;line-height:1.7;color:var(--black);background:var(--white);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+
+.nv{
+  position:fixed;top:0;left:0;width:100%;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 4rem;background:rgba(250,250,249,.92);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.na-logo{display:flex;align-items:center;gap:.75rem}
+.na-mark{width:42px;height:42px;flex-shrink:0}
+.na-mark img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.na-logo-text{display:flex;flex-direction:column;gap:.05rem}
+.na-divider--v{width:1px;height:24px;background:var(--accent);opacity:.35;flex-shrink:0}
+.na-logo-label{
+  font-family:var(--serif);font-size:.7rem;font-weight:400;
+  letter-spacing:.35em;text-transform:uppercase;color:var(--black);line-height:1.4;
+}
+.nv-links{display:flex;gap:2rem;list-style:none}
+.nv-links a{
+  font-family:var(--sans);font-size:.75rem;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--grey);
+  transition:color .3s;
+}
+.nv-links a:hover,.nv-links a.active{color:var(--black)}
+.nv-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nv-burger span{display:block;width:22px;height:2px;background:var(--black);transition:transform .3s,opacity .3s}
+.nv-mobile{
+  display:none;position:fixed;top:0;left:0;width:100%;height:100vh;
+  background:var(--white);z-index:99;
+  flex-direction:column;align-items:center;justify-content:center;gap:2rem;
+}
+.nv-mobile.open{display:flex}
+.nv-mobile a{
+  font-family:var(--sans);font-size:.82rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--grey);
+  transition:color .3s;
+}
+.nv-mobile a:hover{color:var(--accent)}
+
+.article{
+  max-width:750px;margin:0 auto;padding:8rem 2rem 4rem;
+}
+.article-back{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--sans);font-size:.7rem;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--grey);
+  margin-bottom:2.5rem;transition:color .3s;
+}
+.article-back:hover{color:var(--accent)}
+.article-meta{
+  font-family:var(--sans);font-size:.68rem;font-weight:500;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--accent);
+  margin-bottom:1.2rem;
+}
+.article-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);
+  font-weight:400;line-height:1.2;color:var(--black);margin-bottom:1rem;
+}
+.article-intro{
+  font-family:var(--sans);font-size:.95rem;color:var(--grey);
+  line-height:1.8;margin-bottom:2.5rem;text-align:justify;
+  border-left:3px solid var(--accent);padding-left:1.5rem;
+}
+.article-body h2{
+  font-family:var(--serif);font-size:1.3rem;font-weight:500;
+  color:var(--black);margin:2.2rem 0 .8rem;
+}
+.article-body p{
+  font-family:var(--sans);font-size:.9rem;color:var(--black);
+  line-height:1.8;margin-bottom:1.2rem;text-align:justify;
+}
+.article-sources{font-family:var(--sans);font-size:.72rem;font-style:italic;color:var(--grey);line-height:1.7;margin-top:2rem;text-align:justify}
+.article-bar{width:50px;height:2px;background:var(--accent);margin-bottom:2.5rem}
+.article-tag{
+  display:inline-block;margin-top:2rem;
+  font-family:var(--sans);font-size:.6rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--accent);
+  padding:.3rem .7rem;
+}
+
+.ft{
+  padding:3rem 4rem;
+  border-top:1px solid rgba(0,0,0,.06);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.ft-text{font-size:.75rem;color:var(--grey)}
+.ft-links{display:flex;gap:1.5rem}
+.ft-links a{
+  font-family:var(--sans);font-size:.7rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--grey);
+  transition:color .3s;
+}
+.ft-links a:hover{color:var(--accent)}
+
+@media(max-width:1024px){
+  .nv{padding:1rem 2rem}
+  .nv-links{display:none}
+  .nv-burger{display:flex}
+  .article{padding:6rem 1.5rem 3rem}
+  .ft{padding:2rem;flex-direction:column;gap:1rem;text-align:center}
+}
+</style>
+
+<nav class="nv">
+  <a href="../index.html" class="na-logo" style="text-decoration:none">
+    <div class="na-mark">
+      <img src="data:image/png;base64,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" alt="NA">
+    </div>
+    <div class="na-divider--v"></div>
+    <div class="na-logo-text">
+      <span class="na-logo-label" style="font-size:.7rem">Nassim Ahmin</span>
+    </div>
+  </a>
+  <ul class="nv-links">
+    <li><a href="../index.html#presentation">Pr&eacute;sentation</a></li>
+    <li><a href="../index.html#accompagnement">Accompagnement</a></li>
+    <li><a href="../index.html#savoir-faire">Savoir-faire</a></li>
+    <li><a href="index.html" class="active">Actualit&eacute;s</a></li>
+    <li><a href="../index.html" onclick="return false">Contact</a></li>
+  </ul>
+  <button class="nv-burger" aria-label="Menu" onclick="document.getElementById('nv-mobile').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nv-mobile" id="nv-mobile">
+    <a href="../index.html#presentation" onclick="document.getElementById('nv-mobile').classList.remove('open')">Pr&eacute;sentation</a>
+    <a href="../index.html#accompagnement" onclick="document.getElementById('nv-mobile').classList.remove('open')">Accompagnement</a>
+    <a href="../index.html#savoir-faire" onclick="document.getElementById('nv-mobile').classList.remove('open')">Savoir-faire</a>
+    <a href="index.html" onclick="document.getElementById('nv-mobile').classList.remove('open')">Actualit&eacute;s</a>
+    <a href="../index.html" onclick="document.getElementById('nv-mobile').classList.remove('open')">Contact</a>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="index.html" class="article-back">&larr; Tous les articles</a>
+  <div class="article-meta">2 novembre 2026 &mdash; 3 min de lecture</div>
+  <h1 class="article-title">Rapport Gr&eacute;goire&nbsp;: le cr&eacute;dit-vendeur, vendre son entreprise sans encaisser tout le prix le jour de la cession</h1>
+  <div class="article-bar"></div>
+  <p class="article-intro">Parmi les 26 propositions du rapport d&rsquo;Olivia Gr&eacute;goire sur la transmission des PME, l&rsquo;une, plus technique que les autres, vise &agrave; s&eacute;curiser le cr&eacute;dit-vendeur. Le m&eacute;canisme existe d&eacute;j&agrave;, mais il reste peu utilis&eacute;. Tout l&rsquo;enjeu, pour le c&eacute;dant, est de bien l&rsquo;encadrer dans les actes.</p>
+  <div class="article-body">
+    <h2>1. Ce que propose le rapport</h2>
+    <p>Pr&eacute;sent&eacute; le 21 octobre 2026, le rapport rappelle que pr&egrave;s de 370&nbsp;000 entreprises pourraient &ecirc;tre &agrave; reprendre d&rsquo;ici 2030, pour environ 30&nbsp;000 transmissions par an. Le cr&eacute;dit-vendeur n&rsquo;en est pas la mesure phare&nbsp;: Olivia Gr&eacute;goire la qualifie elle-m&ecirc;me de &laquo;&nbsp;plus technique&nbsp;&raquo;, mais &laquo;&nbsp;aussi importante&nbsp;&raquo;.</p>
+    <p>La proposition n&deg;&nbsp;15 s&rsquo;attaque &agrave; deux freins&nbsp;: le risque de d&eacute;faut du repreneur et le paiement de l&rsquo;imp&ocirc;t par le c&eacute;dant, qui doit aujourd&rsquo;hui acquitter l&rsquo;imp&ocirc;t sur un prix qu&rsquo;il n&rsquo;a pas encore per&ccedil;u. Elle pr&eacute;voit une garantie Bpifrance couvrant ces deux risques. Dans L&rsquo;Express, Olivia Gr&eacute;goire &eacute;voque Bpifrance ou la Banque des territoires, car l&rsquo;&eacute;chelonnement de l&rsquo;imp&ocirc;t suppose des garanties que le c&eacute;dant, qui n&rsquo;a plus d&rsquo;entreprise &agrave; mettre en gage, peine &agrave; fournir.</p>
+    <p>Il ne s&rsquo;agit que d&rsquo;une recommandation&nbsp;: elle ne cr&eacute;e aucun droit, et l&rsquo;&eacute;talement de l&rsquo;imp&ocirc;t ne figurait pas dans le projet de loi de finances pour 2027 &agrave; la fin du mois d&rsquo;octobre.</p>
+
+    <h2>2. Le m&eacute;canisme</h2>
+    <p>Le c&eacute;dant accepte qu&rsquo;une partie du prix soit pay&eacute;e &agrave; terme, g&eacute;n&eacute;ralement par &eacute;ch&eacute;ances et avec int&eacute;r&ecirc;ts. Le repreneur r&eacute;duit ainsi son besoin de financement imm&eacute;diat, et une vente que la banque seule n&rsquo;aurait pas financ&eacute;e devient possible. Mais les titres changent de mains d&egrave;s la cession&nbsp;: le c&eacute;dant n&rsquo;est plus associ&eacute;, il devient cr&eacute;ancier, souvent d&rsquo;une holding dont le seul actif est la soci&eacute;t&eacute; qu&rsquo;il vient de vendre.</p>
+
+    <h2>3. Les garanties &agrave; n&eacute;gocier</h2>
+    <p>Sans s&ucirc;ret&eacute;, le c&eacute;dant ne d&eacute;tient qu&rsquo;une cr&eacute;ance ordinaire. La garantie naturelle est le nantissement des titres c&eacute;d&eacute;s&nbsp;: nantissement de compte-titres pour des actions de SAS ou de SA (art. L. 211-20 du Code mon&eacute;taire et financier), nantissement de parts pour une SARL, avec le consentement de la soci&eacute;t&eacute; (art. L. 223-15 du Code de commerce). S&rsquo;y ajoute souvent le cautionnement personnel du repreneur, qui doit respecter le formalisme de l&rsquo;article 2297 du Code civil lorsque la caution est une personne physique.</p>
+    <p>L&rsquo;acte doit aussi pr&eacute;voir une d&eacute;ch&eacute;ance du terme en cas d&rsquo;impay&eacute; ou de revente des titres, ainsi qu&rsquo;un droit d&rsquo;information r&eacute;gulier sur les comptes.</p>
+    <p>En revanche, la soci&eacute;t&eacute; c&eacute;d&eacute;e ne peut pas garantir elle-m&ecirc;me le paiement&nbsp;: l&rsquo;article L. 225-216 du Code de commerce interdit &agrave; une soci&eacute;t&eacute; par actions de pr&ecirc;ter ou de consentir une s&ucirc;ret&eacute; en vue de l&rsquo;achat de ses propres actions par un tiers.</p>
+
+    <h2>4. Deux interlocuteurs &agrave; anticiper</h2>
+    <p>La banque du repreneur exige fr&eacute;quemment que le cr&eacute;dit-vendeur soit subordonn&eacute; &agrave; son pr&ecirc;t, ce qui peut bloquer les &eacute;ch&eacute;ances du c&eacute;dant&nbsp;: les conditions de cette subordination se n&eacute;gocient avant la signature. L&rsquo;acqu&eacute;reur demandera souvent, lui, de pouvoir compenser le solde du prix avec les indemnit&eacute;s de la garantie d&rsquo;actif et de passif, une clause &agrave; encadrer.</p>
+
+    <h2>5. Le point fiscal</h2>
+    <p>La plus-value est imposable en totalit&eacute; l&rsquo;ann&eacute;e de la cession, m&ecirc;me si le prix n&rsquo;est pas encore encaiss&eacute;. L&rsquo;article 1681 F du CGI permet d&rsquo;&eacute;chelonner le paiement de l&rsquo;imp&ocirc;t, mais ses conditions sont strictes&nbsp;: petite entreprise, cession de la majorit&eacute; du capital, perte du contr&ocirc;le, garanties &agrave; fournir au comptable public.</p>
+
+    <h2>6. En pratique</h2>
+    <p>Le cr&eacute;dit-vendeur peut d&eacute;bloquer une transmission, &agrave; condition de le traiter comme un financement &agrave; part enti&egrave;re&nbsp;: montant raisonnable, s&ucirc;ret&eacute;s r&eacute;elles, repreneur solide et imp&ocirc;t provisionn&eacute;. Une &eacute;ventuelle garantie Bpifrance serait un filet suppl&eacute;mentaire, mais elle n&rsquo;existe pas encore.</p>
+  </div>
+  <p class="article-sources">Sources&nbsp;: L&rsquo;Express, entretien avec Olivia Gr&eacute;goire, 21 oct. 2026&nbsp;; AFP via Boursorama, 22 oct. 2026&nbsp;; TPE Actu, 23 oct. 2026&nbsp;; Fondation iFRAP, 22 oct. 2026, mis &agrave; jour le 27 oct. 2026&nbsp;; Scala Patrimoine, 28 oct. 2026&nbsp;; BOI-RPPM-PVBMI-30-10-10&nbsp;; Cons. const., d&eacute;c. n&deg;&nbsp;2021-962 QPC, 14 janv. 2022&nbsp;; L&eacute;gifrance (art. 1681 F CGI, art. L. 225-216 C. com.).</p>
+  <span class="article-tag">Cessions &amp; Transmissions</span>
+</article>
+<footer class="ft">
+  <div>
+    <div class="na-logo">
+      <div class="na-mark" style="width:26px;height:26px">
+        <img src="data:image/png;base64,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" alt="NA">
+      </div>
+      <div class="na-divider--v" style="height:14px"></div>
+      <div class="na-logo-text">
+        <span class="na-logo-label" style="font-size:.5rem">Nassim Ahmin</span>
+        <span class="na-logo-label" style="font-size:.5rem;color:var(--grey);font-weight:400">Avocat au Barreau de Paris</span>
+      </div>
+    </div>
+  </div>
+  <div class="ft-text">Paris, France</div>
+  <div class="ft-links">
+    <a href="../index.html">Accueil</a>
+    <a href="https://www.linkedin.com/in/nassim-ahmin-6a5816123/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
